@@ -11,7 +11,6 @@ pub mod pallas_field;
 /// Implementation of the Vesta curve over Prime field p (p = 2^254 + 45560315531506369815346746415080538113)
 pub mod vesta_field;
 
-mod pasta_field_helpers;
 /// Implementation of the u64 Goldilocks Prime field (p = 2^64 - 2^32 + 1)
 pub mod u64_goldilocks_field;
 /// Implementation of prime fields over 64 bit unsigned integers.

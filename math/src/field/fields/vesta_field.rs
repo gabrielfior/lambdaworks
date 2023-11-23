@@ -1,9 +1,5 @@
-use crate::field::fields::pasta_field_helpers::{to_bits_le, to_bytes_be, to_bytes_le};
 use crate::{
-    field::{
-        element::FieldElement,
-        fields::montgomery_backed_prime_fields::{IsModulus, MontgomeryBackendPrimeField},
-    },
+    field::fields::montgomery_backed_prime_fields::{IsModulus, MontgomeryBackendPrimeField},
     unsigned_integer::element::U256,
 };
 
@@ -18,17 +14,3 @@ impl IsModulus<U256> for MontgomeryConfigVesta255PrimeField {
 }
 
 pub type Vesta255PrimeField = VestaMontgomeryBackendPrimeField<MontgomeryConfigVesta255PrimeField>;
-
-impl FieldElement<Vesta255PrimeField> {
-    pub fn to_bytes_le(&self) -> [u8; 32] {
-        to_bytes_le(&self)
-    }
-
-    pub fn to_bits_le(&self) -> [bool; 256] {
-        to_bits_le(&self)
-    }
-
-    pub fn to_bytes_be(&self) -> [u8; 32] {
-        to_bytes_be(&self)
-    }
-}
